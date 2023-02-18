@@ -1,0 +1,85 @@
+    /* Fonts */
+    @font-face {
+        font-family: Abonto;
+        src: url(./fonts/Aboreto-Regular.ttf);
+    }
+
+    @font-face {
+        font-family: Greek;
+        src: url(./fonts/GFSDidot-Regular.ttf);
+    }
+
+    body {
+        background-color: rgb(199, 55, 55);
+    }
+
+    h1.b1 {
+        font-family: Abonto;
+        color: rgb(0, 0, 0);
+        box-shadow: 5px 5px;
+    }
+
+    label {
+        font-size: 30px;
+        font-family: Greek, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(0, 0, 0);
+    }
+
+    div {
+        border: 1px solid rgba(0, 0, 0, 0.432);
+        padding: 3em;
+        margin-left: 10em;
+        margin-right: 10em;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 15px 15px rgba(141, 98, 98, 0.212);
+        margin-top: 6em;
+    }
+
+    input[type=text] {
+        padding: 10px;
+        border: 0.1px solid rgba(0, 0, 0, 0.192);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+        margin-left: 10px;
+        border-radius: 10px;
+
+    }
+
+    input[type=email] {
+        padding: 10px;
+        border: 0.1px solid rgba(0, 0, 0, 0.192);
+        box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+        margin-left: 10px;
+        border-radius: 10px;
+
+    }
+
+    button {
+        /* remove default behavior */
+        appearance: none;
+        -webkit-appearance: none;
+
+        /* usual styles */
+        padding: 10px;
+        border: none;
+        background-color: #d1d1d1;
+        color: #fff;
+        font-weight: 600;
+        border-radius: 15px;
+        
+        margin-top: 50px;
+        width: 40%;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.404);
+
+    }
+
+    h1.riel {
+        font-size: 13px;
+        color: black;
+
+    }
+
+    button:hover {
+        background-color: rgb(199, 55, 55);
+        box-shadow: 5px 5px rgb(0, 0, 0);
+        cursor: pointer;
+    }

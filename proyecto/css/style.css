@@ -1,0 +1,470 @@
+.item1 {
+    grid-area: first;
+
+}
+
+.item1 img {
+    max-width: 100%;
+    height: auto;
+    width: 80vw;
+    height: 60vh;
+    margin-bottom: 2rem;
+}
+
+.item2 {
+    grid-area: second;
+    overflow-y: auto;
+}
+
+.item3 {
+    grid-area: third;
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Abonto';
+    src: url(../fonts/Aboreto-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(199, 55, 55);
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem 2rem;
+    margin-bottom: 0;
+}
+
+header nav a {
+    display: inline-block;
+    margin-block-start: 1.1em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    justify-content: space-between;
+    border: 1.5px rgba(0, 0, 0, 0.106) solid;
+    color: white;
+    text-decoration: none;
+    padding: 0.7em;
+    margin-right: 15px;
+    margin-left: 15px;
+    box-shadow: 5px 4px rgba(1, 1, 1, 0.318);
+    border-radius: 9px;
+    z-index: 1;
+}
+
+.item-menu {
+    margin-top: 1.2rem;
+    cursor: pointer;
+    font-size: 30px;
+}
+
+h1 {
+    font-family: 'Abonto', Arial, Helvetica, sans-serif;
+    color: white;
+    margin-right: 5em;
+    margin-left: 1em;
+}
+
+/* menu lateral
+obtenido de https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_sidenav
+*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 6em;
+}
+
+.sidenav a {
+    padding: 8px 8px 0px 4px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #8a8a8a;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    margin: 25px;
+}
+
+.sidenav a>a {
+    padding: 8px 8px 0px 8px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #8a8a8a;
+    display: block;
+    transition: 0.3s;
+    text-align: center;
+    margin: 25px;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+
+}
+
+.sidenav a.menu:hover {
+    color: #000000;
+    margin-right: 45%;
+    margin-left: 45%;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+span {
+    display: inline-block;
+    margin-block-start: 0.6em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    justify-content: start;
+}
+
+
+
+/* hover */
+nav a:hover {
+
+    border: 1.5px rgb(0, 0, 0) solid;
+
+    box-shadow: 5px 4px rgb(1, 1, 1);
+    animation: tilt-shaking 1s linear infinite;
+
+}
+
+a.menu:hover {
+    border: 1.5px rgb(0, 0, 0) solid;
+
+    box-shadow: 5px 4px rgb(1, 1, 1);
+    background-color: white;
+    color: black;
+    padding: 0.5em;
+}
+
+/* animaiton */
+@keyframes tilt-shaking {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    75% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 80% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/*  Article   */
+article.container {
+    display: grid;
+    grid-template-areas:
+        'first second'
+        'first second'
+        'first third';
+    background-color: #ffffff91;
+    margin-top: 7em;
+    margin-left: 2em;
+    margin-right: 2em;
+    gap: 20px;
+    position: relative;
+}
+
+.container>div {
+    height: 5rem;
+    padding: 10rem;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.342);
+    border: 0.3em solid rgba(3, 3, 3, 0.26);
+    box-shadow: 10px 10px rgba(255, 0, 0, 0.295);
+}
+
+.container>div.item1 {
+    height: auto;
+    padding: 6rem;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgb(253, 253, 253);
+    border: 0.3em solid rgb(248, 56, 56);
+    box-shadow: 5px 5px rgb(232, 232, 232);
+}
+
+
+.container>div.item2 {
+
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.541);
+    animation: gradient 10s infinite reverse;
+    border: 0.2em solid rgb(248, 56, 56);
+    box-shadow: 5px 5px rgb(232, 232, 232);
+    font-family: 'Abonto', Arial, Helvetica, sans-serif;
+    color: rgb(7, 7, 7);
+    word-spacing: 0.3cm;
+    line-height: 2;
+    direction: ltr;
+    overflow: auto;
+    grid-area: second;
+}
+
+
+
+div.item2>p {
+    top: 40em;
+    margin-block-start: -5.1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.202);
+    color: rgb(248, 56, 56);
+    font-weight: 900;
+    direction: rtl;
+    overflow: auto;
+}
+
+.container>div.item3 {
+    font-size: 20px;
+    background-color: rgba(255, 255, 255, 0.342);
+    border: 0.3em solid rgba(255, 255, 255, 0.301);
+    box-shadow: 5px 5px rgb(232, 232, 232);
+}
+
+div.item3 {
+    background-image: url("../imgs/clouds.jpg");
+    background-size: 1400px 500px;
+}
+
+hr {
+    border: solid rgba(0, 0, 0, 0.158) 1px;
+    width: 80%;
+
+}
+
+.dividier:hover {
+    animation: tilt-shaking linear 5s;
+}
+
+
+
+img.HERA {
+    margin-right: 60px;
+}
+
+footer {
+    background-color: rgb(199, 55, 55);
+    padding: 0.2em;
+
+}
+
+img.dividier {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+img.licence {
+    margin-right: 20em;
+}
+
+h2.hide {
+    display: none;
+}
+
+/* Licence */
+
+.license {
+    margin-top: 0px;
+    height: 2rem;
+}
+
+/* Mobile */
+
+@media only screen and (max-width: 760px) {
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        background-color: rgb(199, 55, 55);
+        top: 0;
+        width: 90%;
+        z-index: 9999;
+        opacity: 90%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 1rem 2rem;
+    }
+
+    header nav {
+        margin-top: 1em;
+    }
+
+    header nav a {
+        margin: 0.5em;
+        font-size: 1.2em;
+    }
+
+    h1 {
+        margin-right: 0;
+    }
+
+    .sidenav {
+        width: 70%;
+        padding-top: 4em;
+    }
+
+    .sidenav a {
+        font-size: 1.2em;
+        margin: 1em;
+        padding: 0;
+    }
+
+    .sidenav a>a {
+        padding: 0;
+    }
+
+    .sidenav .closebtn {
+        font-size: 2em;
+        margin-left: 10px;
+    }
+
+    article.container {
+        margin-top: 10em;
+        margin-left: 1em;
+        margin-right: 1em;
+        grid-template-areas:
+            'first'
+            'second'
+            'third';
+        gap: 10px;
+    }
+
+    .container>div.item1 {
+        padding: 2em;
+        font-size: 1.2em;
+        margin-top: 0;
+    }
+
+    .item1 {
+        width: 82%;
+    }
+
+    .item2 {
+        width: 90.5%;
+        overflow-y: auto;
+        direction: ltr;
+        overflow: auto;
+    }
+
+    .item3 {
+        display: none;
+    }
+
+    .container>div {
+        height: auto;
+        padding: 2em;
+        font-size: 1.2em;
+    }
+
+
+    .container {
+        margin: 80px 20px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+    }
+
+    .container>div {
+        padding: 20px;
+        font-size: 2.5vw;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .container .item1 {
+        grid-column: 1 / -1;
+    }
+
+    .container .item2 {
+        grid-row: 2 / span 2;
+    }
+
+    .container .item3 {
+        grid-column: 2 / -1;
+        grid-row: 3;
+    }
+
+    .dividier {
+        margin: 0;
+        padding: 0;
+        width: 65vw;
+        height: 25vh;
+    }
+
+    .sidenav a:hover {
+        color: #f1f1f1;
+
+    }
+
+    .sidenav a.menu:hover {
+        color: #000000;
+        margin-right: 10%;
+        margin-left: 10%;
+    }
+}
